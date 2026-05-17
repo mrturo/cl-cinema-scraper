@@ -1,0 +1,430 @@
+version = 1
+revision = 3
+requires-python = ">=3.13"
+
+[[package]]
+name = "aiosqlite"
+version = "0.20.0"
+source = { directory = "vendor/aiosqlite" }
+
+[[package]]
+name = "annotated-doc"
+version = "0.0.4"
+source = { registry = "packages" }
+wheels = [
+    { path = "annotated_doc-0.0.4-py3-none-any.whl" },
+]
+
+[[package]]
+name = "annotated-types"
+version = "0.7.0"
+source = { registry = "packages" }
+wheels = [
+    { path = "annotated_types-0.7.0-py3-none-any.whl" },
+]
+
+[[package]]
+name = "anyio"
+version = "4.13.0"
+source = { registry = "packages" }
+dependencies = [
+    { name = "idna" },
+]
+wheels = [
+    { path = "anyio-4.13.0-py3-none-any.whl" },
+]
+
+[[package]]
+name = "apscheduler"
+version = "3.10.4"
+source = { directory = "vendor/apscheduler" }
+
+[[package]]
+name = "beautifulsoup4"
+version = "4.14.3"
+source = { registry = "packages" }
+dependencies = [
+    { name = "soupsieve" },
+    { name = "typing-extensions" },
+]
+wheels = [
+    { path = "beautifulsoup4-4.14.3-py3-none-any.whl" },
+]
+
+[[package]]
+name = "certifi"
+version = "2026.4.22"
+source = { registry = "packages" }
+wheels = [
+    { path = "certifi-2026.4.22-py3-none-any.whl" },
+]
+
+[[package]]
+name = "cinema-scraper"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "aiosqlite" },
+    { name = "apscheduler" },
+    { name = "beautifulsoup4" },
+    { name = "fastapi" },
+    { name = "playwright" },
+    { name = "pydantic" },
+    { name = "pydantic-settings" },
+    { name = "uvicorn", extra = ["standard"] },
+]
+
+[package.optional-dependencies]
+dev = [
+    { name = "coverage" },
+    { name = "httpx" },
+    { name = "pytest" },
+    { name = "pytest-asyncio" },
+    { name = "ruff" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "aiosqlite", directory = "vendor/aiosqlite" },
+    { name = "apscheduler", directory = "vendor/apscheduler" },
+    { name = "beautifulsoup4", specifier = ">=4.12.0" },
+    { name = "coverage", marker = "extra == 'dev'", specifier = ">=7.5.0" },
+    { name = "fastapi", specifier = ">=0.111.0" },
+    { name = "httpx", marker = "extra == 'dev'", specifier = ">=0.27.0" },
+    { name = "playwright", specifier = ">=1.44.0" },
+    { name = "pydantic", specifier = ">=2.7.0" },
+    { name = "pydantic-settings", specifier = ">=2.3.0" },
+    { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.2.0" },
+    { name = "pytest-asyncio", marker = "extra == 'dev'", directory = "vendor/pytest-asyncio" },
+    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.4.0" },
+    { name = "uvicorn", extras = ["standard"], specifier = ">=0.30.0" },
+]
+provides-extras = ["dev"]
+
+[[package]]
+name = "click"
+version = "8.3.1"
+source = { registry = "packages" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+]
+wheels = [
+    { path = "click-8.3.1-py3-none-any.whl" },
+]
+
+[[package]]
+name = "colorama"
+version = "0.4.6"
+source = { registry = "packages" }
+
+[[package]]
+name = "coverage"
+version = "7.13.1"
+source = { registry = "packages" }
+wheels = [
+    { path = "coverage-7.13.1-cp313-cp313-macosx_11_0_arm64.whl" },
+]
+
+[[package]]
+name = "fastapi"
+version = "0.135.3"
+source = { registry = "packages" }
+dependencies = [
+    { name = "annotated-doc" },
+    { name = "pydantic" },
+    { name = "starlette" },
+    { name = "typing-extensions" },
+    { name = "typing-inspection" },
+]
+wheels = [
+    { path = "fastapi-0.135.3-py3-none-any.whl" },
+]
+
+[[package]]
+name = "greenlet"
+version = "3.3.2"
+source = { registry = "packages" }
+wheels = [
+    { path = "greenlet-3.3.2-cp313-cp313-macosx_11_0_universal2.whl" },
+]
+
+[[package]]
+name = "h11"
+version = "0.16.0"
+source = { registry = "packages" }
+wheels = [
+    { path = "h11-0.16.0-py3-none-any.whl" },
+]
+
+[[package]]
+name = "httpcore"
+version = "1.0.9"
+source = { registry = "packages" }
+dependencies = [
+    { name = "certifi" },
+    { name = "h11" },
+]
+wheels = [
+    { path = "httpcore-1.0.9-py3-none-any.whl" },
+]
+
+[[package]]
+name = "httptools"
+version = "0.7.1"
+source = { registry = "packages" }
+wheels = [
+    { path = "httptools-0.7.1-cp313-cp313-macosx_11_0_arm64.whl" },
+]
+
+[[package]]
+name = "httpx"
+version = "0.28.1"
+source = { registry = "packages" }
+dependencies = [
+    { name = "anyio" },
+    { name = "certifi" },
+    { name = "httpcore" },
+    { name = "idna" },
+]
+wheels = [
+    { path = "httpx-0.28.1-py3-none-any.whl" },
+]
+
+[[package]]
+name = "idna"
+version = "3.15"
+source = { registry = "packages" }
+wheels = [
+    { path = "idna-3.15-py3-none-any.whl" },
+]
+
+[[package]]
+name = "iniconfig"
+version = "2.3.0"
+source = { registry = "packages" }
+wheels = [
+    { path = "iniconfig-2.3.0-py3-none-any.whl" },
+]
+
+[[package]]
+name = "packaging"
+version = "26.0"
+source = { registry = "packages" }
+wheels = [
+    { path = "packaging-26.0-py3-none-any.whl" },
+]
+
+[[package]]
+name = "playwright"
+version = "1.58.0"
+source = { registry = "packages" }
+dependencies = [
+    { name = "greenlet" },
+    { name = "pyee" },
+]
+wheels = [
+    { path = "playwright-1.58.0-py3-none-any.whl" },
+]
+
+[[package]]
+name = "pluggy"
+version = "1.6.0"
+source = { registry = "packages" }
+wheels = [
+    { path = "pluggy-1.6.0-py3-none-any.whl" },
+]
+
+[[package]]
+name = "pydantic"
+version = "2.12.5"
+source = { registry = "packages" }
+dependencies = [
+    { name = "annotated-types" },
+    { name = "pydantic-core" },
+    { name = "typing-extensions" },
+    { name = "typing-inspection" },
+]
+wheels = [
+    { path = "pydantic-2.12.5-py3-none-any.whl" },
+]
+
+[[package]]
+name = "pydantic-core"
+version = "2.41.5"
+source = { registry = "packages" }
+dependencies = [
+    { name = "typing-extensions" },
+]
+wheels = [
+    { path = "pydantic_core-2.41.5-cp313-cp313-macosx_11_0_arm64.whl" },
+]
+
+[[package]]
+name = "pydantic-settings"
+version = "2.13.1"
+source = { registry = "packages" }
+dependencies = [
+    { name = "pydantic" },
+    { name = "python-dotenv" },
+    { name = "typing-inspection" },
+]
+wheels = [
+    { path = "pydantic_settings-2.13.1-py3-none-any.whl" },
+]
+
+[[package]]
+name = "pyee"
+version = "13.0.1"
+source = { registry = "packages" }
+dependencies = [
+    { name = "typing-extensions" },
+]
+wheels = [
+    { path = "pyee-13.0.1-py3-none-any.whl" },
+]
+
+[[package]]
+name = "pygments"
+version = "2.20.0"
+source = { registry = "packages" }
+wheels = [
+    { path = "Pygments-2.20.0-py3-none-any.whl" },
+]
+
+[[package]]
+name = "pytest"
+version = "9.0.2"
+source = { registry = "packages" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "iniconfig" },
+    { name = "packaging" },
+    { name = "pluggy" },
+    { name = "pygments" },
+]
+wheels = [
+    { path = "pytest-9.0.2-py3-none-any.whl" },
+]
+
+[[package]]
+name = "pytest-asyncio"
+version = "0.23.8"
+source = { directory = "vendor/pytest-asyncio" }
+dependencies = [
+    { name = "pytest" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pytest", specifier = ">=7" }]
+
+[[package]]
+name = "python-dotenv"
+version = "1.2.2"
+source = { registry = "packages" }
+wheels = [
+    { path = "python_dotenv-1.2.2-py3-none-any.whl" },
+]
+
+[[package]]
+name = "pyyaml"
+version = "6.0.3"
+source = { registry = "packages" }
+wheels = [
+    { path = "PyYAML-6.0.3-cp313-cp313-macosx_11_0_arm64.whl" },
+]
+
+[[package]]
+name = "ruff"
+version = "0.14.10"
+source = { registry = "packages" }
+wheels = [
+    { path = "ruff-0.14.10-py3-none-macosx_11_0_arm64.whl" },
+]
+
+[[package]]
+name = "soupsieve"
+version = "2.8.3"
+source = { registry = "packages" }
+wheels = [
+    { path = "soupsieve-2.8.3-py3-none-any.whl" },
+]
+
+[[package]]
+name = "starlette"
+version = "1.0.0"
+source = { registry = "packages" }
+dependencies = [
+    { name = "anyio" },
+]
+wheels = [
+    { path = "starlette-1.0.0-py3-none-any.whl" },
+]
+
+[[package]]
+name = "typing-extensions"
+version = "4.15.0"
+source = { registry = "packages" }
+wheels = [
+    { path = "typing_extensions-4.15.0-py3-none-any.whl" },
+]
+
+[[package]]
+name = "typing-inspection"
+version = "0.4.2"
+source = { registry = "packages" }
+dependencies = [
+    { name = "typing-extensions" },
+]
+wheels = [
+    { path = "typing_inspection-0.4.2-py3-none-any.whl" },
+]
+
+[[package]]
+name = "uvicorn"
+version = "0.42.0"
+source = { registry = "packages" }
+dependencies = [
+    { name = "click" },
+    { name = "h11" },
+]
+wheels = [
+    { path = "uvicorn-0.42.0-py3-none-any.whl" },
+]
+
+[package.optional-dependencies]
+standard = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "httptools" },
+    { name = "python-dotenv" },
+    { name = "pyyaml" },
+    { name = "uvloop", marker = "platform_python_implementation != 'PyPy' and sys_platform != 'cygwin' and sys_platform != 'win32'" },
+    { name = "watchfiles" },
+    { name = "websockets" },
+]
+
+[[package]]
+name = "uvloop"
+version = "0.22.1"
+source = { registry = "packages" }
+wheels = [
+    { path = "uvloop-0.22.1-cp313-cp313-macosx_10_13_universal2.whl" },
+]
+
+[[package]]
+name = "watchfiles"
+version = "1.1.1"
+source = { registry = "packages" }
+dependencies = [
+    { name = "anyio" },
+]
+wheels = [
+    { path = "watchfiles-1.1.1-cp313-cp313-macosx_11_0_arm64.whl" },
+]
+
+[[package]]
+name = "websockets"
+version = "16.0"
+source = { registry = "packages" }
+wheels = [
+    { path = "websockets-16.0-cp313-cp313-macosx_11_0_arm64.whl" },
+]

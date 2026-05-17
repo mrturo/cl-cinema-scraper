@@ -1,0 +1,1 @@
+"""Cinema scraper sub-package."""
